@@ -1,0 +1,19 @@
+body{
+    background: -webkit-linear-gradient(90deg,#920292 10%,#0a149a 100%); 
+    }
+.head{
+    margin: 100px;
+    text-align: center;
+    -webkit-text-fill-color: azure;
+    }
+.pdiv{
+    height: 100%;
+    }
+.kdiv{
+    text-align: right;
+    }
+.tablebox{
+    -webkit-text-fill-color: azure;
+    margin-left: 30%;
+    width: 50%;
+    }

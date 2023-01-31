@@ -1,0 +1,24 @@
+/*for the center of the page*/
+#clr{
+    display: none;
+}
+h1,button,p{
+    color: burlywood;
+}
+
+.images,.blank,.achievents{
+}
+button{
+    border: 0;
+    margin: 5px;
+    border: 5px solid olivedrab;
+    background: transparent;
+}
+.c1,.c2,.c3,.c4,.c5,.l1,.l2,.l3,.l4,.l5,#uuu{
+    height: 300px;
+    width: 200pxx;
+    border-radius: 30px;
+}
+.card{
+    text-align: center;
+}

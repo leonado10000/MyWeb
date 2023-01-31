@@ -1,0 +1,202 @@
+{% load static %}
+<html lang="en">
+<head>
+    <title>Hollow Knight</title>
+    <!-- CSS only -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet"  href="{% static 'lec/style.css' %}">
+
+
+
+
+
+
+<!--
+   <style>
+    .btnC{
+        display: none;
+    }
+    .btnL{
+        display: block;
+    }
+
+   </style> 
+
+    <script type="text/javascript" href="{% static 'js/script_1.js' %}">     
+        let p = 1;
+        let c = 1;
+        document.addEventListener("DOMContentLoaded",() => {
+            document.querySelectorAll("img").forEach(i => {
+                i.style.display = "none";
+            })
+            document.querySelector(".p1").style.display = "block";
+        })
+
+        function next(t){
+            document.querySelectorAll("img").forEach(img => {
+                    off(img);
+                })
+            if (t == "0"){
+                if (p==4){p=1;}
+                else{p++}
+                document.querySelector(".lv").innerHTML = `${p}`
+                on(document.querySelector(`.p${p}`));
+            }
+            else{
+                if (p==1){p=4;}
+                else{p--}
+                document.querySelector(".lv").innerHTML = `${p}`
+                on(document.querySelector(`.p${p}`));
+            }
+        
+        }
+
+        function future(t){
+            let x = JSON.parse("{{ name }}")
+            document.querySelectorAll("img").forEach(img => {
+                off(img)
+            })
+            if (t == '1'){
+                if(c == 5){c=1;}
+                else{
+                    c++;
+                }
+                document.querySelector(".lv").innerHTML = `{{ name }}`
+                on(document.querySelector(`.c${c}`))
+            }
+            else{
+                if(c == 1){c=5;}
+            else{
+                c--;
+            }
+            
+            document.querySelector(".lv").innerHTML = x[c];
+            on(document.querySelector(`.c${c}`));
+
+            }
+        }
+
+        function toggle(t){
+            document.querySelectorAll(".btnC").forEach(b => {
+                off(b)
+            })
+            document.querySelectorAll('.btnL').forEach(b => {
+                off(b)
+            })
+            document.querySelectorAll('img').forEach(e => {
+                off(e);
+            })
+
+            if (t == 'A'){
+                on(document.querySelector('.p1'));
+                document.querySelectorAll(".btnL").forEach(b => {
+                on(b);
+            })
+            }
+            else{
+                on(document.querySelector('.c1'));
+                document.querySelectorAll('.btnC').forEach(b => {
+                on(b);
+            })
+            }
+        }
+
+
+
+        function on(k){
+            k.style.display = "block";
+        }
+        function off(k){
+            k.style.display = "none";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+</head>
+
+<body style="-webkit-text-fill-color: azure;">
+
+
+    <div id="body">
+        <div class="a">
+            <h1>RPG seletor</h1>
+        </div><div class="row">
+                
+                <div class="col">
+                    <div class="cardA" style="width: 30rem;height: 30rem;">
+                        CARD A
+                        {% for i in imgs %}
+                        <div class="imgbox">
+                            <img class="p{{ forloop.counter }}" style="display: block;" src="{% static i %}" alt="" style="height: 200px;">
+                        </div>
+                        {% endfor %}
+                        {% for i in name %}
+                        <div class="imgbox">
+                            <img class="c{{ forloop.counter }}" style="display: none;"  src="{% static  '/img/color/c'   %}{{ forloop.counter }}.jpg" alt="" style="height: 200px;">
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="cardB" style="width: 30rem;height: 30rem;">
+                        CARD B
+
+
+
+                        <button onclick="toggle('B')">COLOR</button>
+                        <button onclick="toggle('A')">level</button>
+
+
+
+
+                        <div class="level">
+                            Level <h1 class="lv">1</h1>
+                        </div>
+                        
+                        <div class="buttonbox">
+                            <button class="btnL" onclick="next('1') " >
+                                <h1> <<< </h1>
+                            </button>
+                            <button class="btnL"  onclick="next('0')" >
+                                <h1>>>></h1>
+                            </button>
+                            <button class="btnC" onclick="future('1')" >
+                                <h1> Left </h1>
+                            </button>
+                            <button class="btnC"  onclick="future('0')" >
+                                <h1>Right</h1>
+                            </button>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="tb">
+                <a href="{% url 'UI_0' %}">GO to UI page</a>
+            </div> 
+        </div b>
+    </div body>
+
+
+</body>
+</html>

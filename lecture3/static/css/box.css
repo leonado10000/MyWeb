@@ -1,0 +1,60 @@
+#body{
+    background-color: black;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr;
+    -webkit-text-fill-color: aqua;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.HEADBOX{
+    grid-row: 1 ;
+}
+
+
+
+.MAINBOX{
+    grid-template-columns: 1fr;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+
+.RIGHTBOX{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+.top{
+    grid-row: 1;
+}
+.mid{
+    grid-row: 2;
+}
+.downbar{
+    grid-row: 3;
+}
+
+.LEFTBOX{
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+
+    text-align: center;
+    font-family: 'Papyrus', cursive;
+    
+}
+
+
+
+
+
+.Comment{
+    display: none;
+}

@@ -1,0 +1,103 @@
+top{
+    -webkit-text-fill-color: azure;
+}
+/*comman for all*/
+    .top{
+        padding-top: 8%;
+        height: 30vh;
+        -webkit-text-fill-color: azure;
+        text-align: center;    
+    }
+
+    .b{
+        height:70vh;
+    }
+
+
+/*for RPG selector*/
+    #body{
+        position: absolute;
+        top: 0;left: 0;bottom: 0;right: 0;
+        background: -webkit-linear-gradient(90deg,#551616 20%,#0b001ef6 100%); 
+    }
+    .tablebox{
+        margin-top: 15%;
+        -webkit-text-fill-color: azure;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .tb{
+        position: absolute;
+        bottom: 0;right: 0;
+    }
+    .row{
+        height: 65vh;
+    }
+    .cardA,.cardB{
+        display: flex;
+        flex-wrap: wrap;
+        width: 30;
+        text-align: center;
+        border-radius: 50px;
+        background: linear-gradient(
+            135deg,
+            rgba(225,225,225,0.1),
+            rgba(225,225,225,0.1)
+        );
+        backdrop-filter: blur(21px);
+        -webkit-backdrop-filter: blur(21px);
+        margin-left: 20%;
+    }
+    .imgbox{
+        position: absolute;
+        bottom: 10;right: 30;left: 70;
+    }
+
+    .level{
+        margin-top: 100px;
+    }
+    .lv > h1{
+        font-size: 60px;
+    }
+    .buttonbox{
+        position: absolute;
+        bottom: 0;
+        right: 0px;left: 0;
+    }
+    .btnL:nth-child(even){
+        right: 30;
+    }
+    .btnL:nth-child(odd){
+        left: 30;
+    }
+    
+    .btnC:nth-child(even){
+        right: 30;
+    }
+    .btnC:nth-child(odd){
+        left: 30;
+    }
+    button{
+        height: 50px;
+        background-color: black;
+    }
+
+    .btnL,.btnC {
+        
+        position: absolute;
+        bottom: 50;
+        cursor: pointer;
+        border: 1px solid;
+        background-color: #0b001ef6;
+        height: 50px;
+        width: 200px;
+        font-size: 1.5em;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    img{
+        border-radius: 25px;
+        height: 400px;
+        width: 90%;
+    }
